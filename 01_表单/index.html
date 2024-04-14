@@ -1,12 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>用户注册</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
-    
+    <!--
+    -- 对于包含表单内容的容器，建议 使用 form
+    -- form 自带一些提交事件 回车提交/type="submit" 提交
+    -- 层次结构深和层次结构浅，犹豫不决时，选深的（方便 CSS）
+    -- 布尔属性
+        -- multiple="multiple"
+        -- checked="checked"
+        -- selected="selected"
+    -- button type="reset" 重置当前 form 下的所有表单元素至默认值
+-->
+    <form class="container">
+        <h1>用户注册</h1>
+        <div class="form-item">
+            <input type="text" placeholder="请输入 11 位手机号" maxlength="11" />
+        </div>
+        <div class="form-item">
+            <input type="text" placeholder="请填写验证码">
+            <button type="button">发送验证码</button>
+        </div>
+        <div class="form-item">
+            <input type="password" name="" id="" placeholder="请输入密码">
+        </div>
+        <div class="form-item">
+            <input type="password" name="" id="" placeholder="请再次确认密码">
+        </div>
+        <div class="form-item">
+            <select name="" id="" multiple="multiple">
+                <option>爱好1</option>
+                <option>爱好2</option>
+                <option>爱好3</option>
+                <option>爱好4</option>
+                <option>爱好5</option>
+                <option>爱好6</option>
+                <option>爱好7</option>
+                <option>爱好8</option>
+                <option>爱好9</option>
+                <option>爱好10</option>
+            </select>
+        </div>
+        <div class="form-item">
+            <div class="title">性别</div>
+            <div>
+                <label>
+                    <input type="radio" name="sex" id="male" checked>
+                    <span>男</span>
+                </label>
+                <label>
+                    <input type="radio" name="sex" id="">
+                    <span>女</span>
+                </label>
+            </div>
+        </div>
+        <div class="form-item">
+            <textarea name="" id="" placeholder="请输入个人简介"></textarea>
+        </div>
+        <div class="form-item">
+            <label>
+                <input type="checkbox" name="" id="">
+                <span>我已阅读并同意《用户协议》</span>
+            </label>
+        </div>
+        <div class="form-item">
+            <button type="button">立即注册</button>
+            <button type="reset">重置表单</button>
+        </div>
+    </form>
 </body>
+
 </html>
