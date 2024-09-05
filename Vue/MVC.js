@@ -11,7 +11,7 @@ myApp.Model = class Model {
         if (this.val < 100) this.val += v
     }
     sub(v) {
-        if (val > 0) this.val -= v
+        if (this.val > 0) this.val -= v
     }
     getVal() {
         return this.val
@@ -25,7 +25,7 @@ myApp.Model = class Model {
     }
     // 更新所有视图
     notify() {
-        for (let i = 0; i <= this.views.length; i++) {
+        for (let i = 0; i < this.views.length; i++) {
             this.views[i].render(this)
         }
     }
@@ -44,7 +44,7 @@ myApp.View = class View {
     }
     // 将 model 上的数据 绑定到 dom 上
     render(model) {
-        this.$num.text(model.getVal() + 'rmb')
+        this.$num.textContent(model.getVal() + 'rmb')
     }
 
 };
@@ -59,7 +59,7 @@ myApp.Controller = class Controller {
         this.view = myApp.View(this)
 
         // 将 view 注册到 model 中（这样当 model 更新就会去通知 view 了）
-        this.model.register(view)
+        this.model.register(this.view)
         this.model.notify()
     }
 
