@@ -5,9 +5,9 @@
   "author": "langyamu <1764714737@qq.com>",
   "license": "MIT",
   "scripts": {
-    "start": "serve ./"
+    "start": "http-server ./"
   },
   "dependencies": {
-    "serve": "^14.2.4"
+    "http-server": "^14.1.1"
   }
 }
