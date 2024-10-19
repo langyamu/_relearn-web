@@ -1,0 +1,13 @@
+{
+  "name": "relearn-web",
+  "version": "1.0.0",
+  "repository": "https://github.com/langyamu/_relearn-web",
+  "author": "langyamu <1764714737@qq.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "serve ./"
+  },
+  "dependencies": {
+    "serve": "^14.2.4"
+  }
+}
