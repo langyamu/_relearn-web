@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <!-- <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js" crossorigin></script> -->
+    <script src="../../.lib/react@18.3.1.umd.development.js" crossorigin></script>
+    <script src="../../.lib/react-dom@18.3.1.umd.development.js" crossorigin></script>
+    <script src="../../.lib/babel@7.25.8.min.js" crossorigin></script>
+</body>
+<script type="text/babel">
+
+    const styleObj = {
+        color: '#f40',
+        backgroundColor: 'antiquewhite'
+    }
+
+    document.body.insertAdjacentHTML(
+        `
+        <style>
+            .test {
+                background-color: antiquewhite;
+            }
+        </style>
+        `
+    )
+
+    function MyApp() {
+        return (
+            <main>
+                <h1 className="test">welcome to my app! --- h1 - 1</h1>
+                <h2 style={{ color: '#fff', backgroundColor: '#000' }}>H2</h2>
+                <h2 style={styleObj}>H2</h2>
+            </main>
+        ) // 编辑器渲染错误，实际代码没问题
+    }
+
+    // 渲染到页面上
+    // 获取根元素
+    const rootEl = document.getElementById('root')
+    // 创建 ReactDOM 根实例
+    const rootIns = ReactDOM.createRoot(rootEl)
+    // 使用根实例渲染组件
+    rootIns.render(React.createElement(MyApp))
+</script>
+
+</html>
