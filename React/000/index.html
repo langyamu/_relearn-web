@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="root"></div>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script>
+        // 组件：页面上的一部分
+        // 点击收藏或取消收藏
+        function LikeButton() {
+            return React.createElement(
+                'button', // 标签
+                { // 事件
+                    onClick() {
+                        console.log('点击收藏或取消收藏')
+                    }
+                },
+                'Click' // 标签内容
+            )
+        }
+        // 渲染到页面上
+        // 获取根元素
+        const rootEl = document.getElementById('root')
+        // 创建 ReactDOM 根实例
+        const rootIns = ReactDOM.createRoot(rootEl)
+        // 使用根实例渲染组件
+        rootIns.render(LikeButton())
+        // 或者
+        // rootIns.render(ReactDOM.createElement(LikeButton))
+    </script>
+</body>
+
+</html>
