@@ -1,0 +1,12 @@
+.square {
+    --size: 80px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    width: var(--size);
+    height: var(--size);
+    line-height: var(--size);
+    text-align: center;
+    /* 解决棋盘内部边框为 2px 的问题 */
+    margin-right: -1px;
+    margin-bottom: -1px;
+}
