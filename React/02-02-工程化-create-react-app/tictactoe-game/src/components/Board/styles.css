@@ -1,5 +1,6 @@
 .board-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+.board-header{
+    margin-bottom: 5px;
 }
